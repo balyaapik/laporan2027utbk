@@ -1,0 +1,102 @@
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+\definecolor{StudentNavy}{HTML}{102A43}
+\definecolor{StudentBlue}{HTML}{1769E0}
+\definecolor{StudentCyan}{HTML}{14A6B8}
+\definecolor{StudentGold}{HTML}{E8A628}
+\definecolor{StudentInk}{HTML}{243B53}
+\definecolor{StudentMist}{HTML}{F2F7FC}
+\definecolor{StudentSoft}{HTML}{D9E8F5}
+\definecolor{StudentGray}{HTML}{627D98}
+\definecolor{StudentLine}{HTML}{C9D9E8}
+\definecolor{StudentWhite}{HTML}{FFFFFF}
+\definecolor{StudentGreen}{HTML}{2B8A6E}
+\definecolor{StudentRed}{HTML}{B84A4A}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=StudentBlue,
+  linkcolor=StudentBlue
+}
+
+\setbeamercolor{normal text}{fg=StudentInk,bg=StudentWhite}
+\setbeamercolor{structure}{fg=StudentBlue}
+\setbeamercolor{frametitle}{fg=StudentNavy,bg=StudentWhite}
+\setbeamercolor{title}{fg=StudentWhite}
+\setbeamercolor{subtitle}{fg=StudentSoft}
+\setbeamercolor{author}{fg=StudentWhite}
+\setbeamercolor{date}{fg=StudentSoft}
+\setbeamercolor{block title}{fg=StudentWhite,bg=StudentBlue}
+\setbeamercolor{block body}{fg=StudentInk,bg=StudentMist}
+\setbeamercolor{alerted text}{fg=StudentBlue}
+
+\setbeamerfont{title}{series=\bfseries,size=\fontsize{29}{34}\selectfont}
+\setbeamerfont{subtitle}{size=\fontsize{14.5}{18}\selectfont}
+\setbeamerfont{author}{series=\bfseries,size=\fontsize{15}{18}\selectfont}
+\setbeamerfont{date}{size=\fontsize{11.5}{14}\selectfont}
+\setbeamerfont{frametitle}{series=\bfseries,size=\fontsize{19.5}{23}\selectfont}
+\setbeamerfont{normal text}{size=\fontsize{12.2}{15}\selectfont}
+\setbeamerfont{block title}{series=\bfseries,size=\fontsize{13}{16}\selectfont}
+\setbeamerfont{block body}{size=\fontsize{12}{15.5}\selectfont}
+\setbeamerfont{footline}{size=\fontsize{8}{10}\selectfont}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{itemize item}{\color{StudentCyan}\raisebox{0.12ex}{\scriptsize$\blacktriangleright$}}
+\setbeamertemplate{itemize subitem}{\color{StudentBlue}\scriptsize$\bullet$}
+\setlength{\leftmargini}{1.2em}
+\setlength{\leftmarginii}{1.1em}
+
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,leftskip=0.7cm,rightskip=0.7cm,sep=0.17cm]{frametitle}
+    \rightskip=0pt plus 1fil\relax
+    \usebeamerfont{frametitle}\insertframetitle\par
+    \color{StudentCyan}\rule{\dimexpr\paperwidth-1.8cm\relax}{0.8pt}
+  \end{beamercolorbox}
+}
+
+\newcommand{\currentchapter}{--}
+\setbeamertemplate{footline}{%
+  \leavevmode
+  \hbox{%
+    \begin{beamercolorbox}[wd=.67\paperwidth,ht=2.7ex,dp=1.2ex,leftskip=.7cm]{author in head/foot}%
+      \color{StudentGray}\usebeamerfont{footline}Sosialisasi Orang Tua \textbar\ SMAN 1 Muntilan
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.31\paperwidth,ht=2.7ex,dp=1.2ex,center]{date in head/foot}%
+      \color{StudentBlue}\usebeamerfont{footline}Bab \currentchapter\ \textbar\ \insertframenumber/\inserttotalframenumber
+    \end{beamercolorbox}%
+  }
+}
+
+\newcommand{\kicker}[1]{%
+  {\color{StudentCyan}\bfseries\fontsize{10.5}{13}\selectfont\MakeUppercase{#1}}\par\vspace{0.11cm}
+}
+\newcommand{\claim}[1]{%
+  {\color{StudentNavy}\bfseries\fontsize{16}{19}\selectfont #1}\par
+}
+\newcommand{\metric}[2]{%
+  {\color{StudentBlue}\bfseries\fontsize{27}{30}\selectfont #1}\par
+  \vspace{0.04cm}
+  {\color{StudentGray}\fontsize{11.3}{14}\selectfont #2}
+}
+\newcommand{\answer}[1]{%
+  \vspace{0.10cm}
+  {\color{StudentGreen}\bfseries\fontsize{11.5}{14}\selectfont Jawaban: #1}
+}
+
+\newcommand{\statusok}{\textcolor{StudentGreen}{\bfseries RESMI 2026}}
+\newcommand{\statusofficial}{\textcolor{StudentGreen}{\bfseries RESMI 2026}}
+\newcommand{\statusbase}{\textcolor{StudentBlue}{\bfseries ACUAN DASAR}}
+\newcommand{\statusprojection}{\textcolor{StudentGold}{\bfseries PROYEKSI 2027}}
+\newcommand{\statuswait}{\textcolor{StudentRed}{\bfseries BELUM FINAL}}
