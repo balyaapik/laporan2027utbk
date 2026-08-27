@@ -33,5 +33,6 @@ Untuk menambah bab:
 3. Proyeksi UTBK 2027.
 4. Pelaksanaan pembimbingan UTBK 2026.
 5. Evaluasi program SMAN 1 Muntilan.
+6. Peta materi dan kurikulum operasional UTBK.
 
 Informasi resmi UTBK 2026, proyeksi 2027, dan data internal harus selalu diberi status yang jelas serta disertai sumber pada bagian akhir bab.
