@@ -1,0 +1,501 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% -----------------------------------------------------------------------------
+% Identitas visual StudentPro -- versi sosialisasi orang tua
+% -----------------------------------------------------------------------------
+\definecolor{StudentNavy}{HTML}{102A43}
+\definecolor{StudentBlue}{HTML}{1769E0}
+\definecolor{StudentCyan}{HTML}{14A6B8}
+\definecolor{StudentGold}{HTML}{E8A628}
+\definecolor{StudentInk}{HTML}{243B53}
+\definecolor{StudentMist}{HTML}{F2F7FC}
+\definecolor{StudentSoft}{HTML}{D9E8F5}
+\definecolor{StudentGray}{HTML}{627D98}
+\definecolor{StudentLine}{HTML}{C9D9E8}
+\definecolor{StudentWhite}{HTML}{FFFFFF}
+\definecolor{StudentGreen}{HTML}{2B8A6E}
+\definecolor{StudentRed}{HTML}{B84A4A}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=StudentBlue,
+  linkcolor=StudentBlue
+}
+
+\setbeamercolor{normal text}{fg=StudentInk,bg=StudentWhite}
+\setbeamercolor{structure}{fg=StudentBlue}
+\setbeamercolor{frametitle}{fg=StudentNavy,bg=StudentWhite}
+\setbeamercolor{title}{fg=StudentWhite}
+\setbeamercolor{subtitle}{fg=StudentSoft}
+\setbeamercolor{author}{fg=StudentWhite}
+\setbeamercolor{date}{fg=StudentSoft}
+\setbeamercolor{block title}{fg=StudentWhite,bg=StudentBlue}
+\setbeamercolor{block body}{fg=StudentInk,bg=StudentMist}
+\setbeamercolor{alerted text}{fg=StudentBlue}
+
+\setbeamerfont{title}{series=\bfseries,size=\fontsize{30}{35}\selectfont}
+\setbeamerfont{subtitle}{size=\fontsize{15}{19}\selectfont}
+\setbeamerfont{author}{series=\bfseries,size=\fontsize{15}{18}\selectfont}
+\setbeamerfont{date}{size=\fontsize{11.5}{14}\selectfont}
+\setbeamerfont{frametitle}{series=\bfseries,size=\fontsize{19.5}{23}\selectfont}
+\setbeamerfont{normal text}{size=\fontsize{13.5}{17}\selectfont}
+\setbeamerfont{block title}{series=\bfseries,size=\fontsize{13}{16}\selectfont}
+\setbeamerfont{block body}{size=\fontsize{12}{15.5}\selectfont}
+\setbeamerfont{footline}{size=\fontsize{8}{10}\selectfont}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{itemize item}{\color{StudentCyan}\raisebox{0.12ex}{\scriptsize$\blacktriangleright$}}
+\setbeamertemplate{itemize subitem}{\color{StudentBlue}\scriptsize$\bullet$}
+\setlength{\leftmargini}{1.2em}
+\setlength{\leftmarginii}{1.1em}
+
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,leftskip=0.7cm,rightskip=0.7cm,sep=0.17cm]{frametitle}
+    \rightskip=0pt plus 1fil\relax\usebeamerfont{frametitle}\insertframetitle\par
+    \color{StudentCyan}\rule{\dimexpr\paperwidth-1.8cm\relax}{0.8pt}
+  \end{beamercolorbox}
+}
+
+\setbeamertemplate{footline}{%
+  \leavevmode
+  \hbox{%
+    \begin{beamercolorbox}[wd=.67\paperwidth,ht=2.7ex,dp=1.2ex,leftskip=.7cm]{author in head/foot}%
+      \color{StudentGray}\usebeamerfont{footline}Sosialisasi Orang Tua \textbar\ SMAN 1 Muntilan
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.31\paperwidth,ht=2.7ex,dp=1.2ex,center]{date in head/foot}%
+      \color{StudentBlue}\usebeamerfont{footline}Bab 3 \textbar\ \insertframenumber/\inserttotalframenumber
+    \end{beamercolorbox}%
+  }
+}
+
+\newcommand{\kicker}[1]{%
+  {\color{StudentCyan}\bfseries\fontsize{10.5}{13}\selectfont\MakeUppercase{#1}}\par\vspace{0.11cm}
+}
+
+\newcommand{\claim}[1]{%
+  {\color{StudentNavy}\bfseries\fontsize{18}{22}\selectfont #1}\par
+}
+
+\newcommand{\metric}[2]{%
+  {\color{StudentBlue}\bfseries\fontsize{27}{30}\selectfont #1}\par
+  \vspace{0.04cm}
+  {\color{StudentGray}\fontsize{11.5}{14.5}\selectfont #2}
+}
+
+\newcommand{\statusofficial}{\textcolor{StudentGreen}{\bfseries RESMI 2026}}
+\newcommand{\statusbase}{\textcolor{StudentBlue}{\bfseries ACUAN DASAR}}
+\newcommand{\statusprojection}{\textcolor{StudentGold}{\bfseries PROYEKSI 2027}}
+\newcommand{\statuswait}{\textcolor{StudentRed}{\bfseries BELUM FINAL}}
+
+\title{Proyeksi UTBK--SNBT 2027}
+\subtitle{Bab 3 \textbar\ Menyiapkan siswa tanpa terjebak rumor perubahan}
+\author{Balya Rochmadi}
+\date{SMAN 1 Muntilan bersama LMS StudentPro \textbar\ Tahun Ajaran 2026/2027}
+
+\begin{document}
+
+% Slide 1 ---------------------------------------------------------------------
+\begingroup
+\setbeamercolor{background canvas}{bg=StudentNavy}
+\begin{frame}[plain]
+  \vspace{0.65cm}
+  \kicker{SMAN 1 Muntilan \textbar\ StudentPro}
+  \vspace{0.08cm}
+  {\usebeamerfont{title}\color{StudentWhite}\inserttitle\par}
+  \vspace{0.38cm}
+  {\usebeamerfont{subtitle}\color{StudentSoft}\insertsubtitle\par}
+  \vfill
+  {\color{StudentGold}\rule{2.3cm}{2.5pt}}\par
+  \vspace{0.20cm}
+  {\usebeamerfont{author}\color{StudentWhite}\insertauthor}\par
+  {\usebeamerfont{date}\color{StudentSoft}\insertdate}
+  \vspace{0.42cm}
+\end{frame}
+\endgroup
+
+% Slide 2 ---------------------------------------------------------------------
+\begin{frame}{Bab ini membahas proyeksi, bukan pengumuman resmi}
+  \kicker{Batas Informasi}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.30\textwidth}
+      \begin{block}{Sudah diketahui}
+        Struktur dan framework UTBK--SNBT 2026 serta bentuk sertifikat hasil 2026.
+      \end{block}
+    \end{column}
+    \begin{column}{0.30\textwidth}
+      \begin{block}{Diproyeksikan}
+        Unsur yang mungkin berlanjut atau berkembang pada UTBK--SNBT 2027.
+      \end{block}
+    \end{column}
+    \begin{column}{0.30\textwidth}
+      \begin{block}{Harus ditunggu}
+        Framework, jadwal, ketentuan peserta, serta rincian penilaian resmi 2027.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vspace{0.28cm}
+  \centering
+  {\color{StudentNavy}\bfseries\fontsize{15}{18}\selectfont Strategi disiapkan lebih awal; keputusan final mengikuti SNPMB.}
+\end{frame}
+
+% Slide 3 ---------------------------------------------------------------------
+\begin{frame}{Empat label mencegah informasi tercampur}
+  \kicker{Cara Membaca Bab 3}
+  {\fontsize{10.6}{13.2}\selectfont
+  \renewcommand{\arraystretch}{1.08}
+  \begin{tabularx}{\textwidth}{>{\RaggedRight\arraybackslash}p{0.20\textwidth} >{\RaggedRight\arraybackslash}p{0.25\textwidth} >{\RaggedRight\arraybackslash}X}
+    \toprule
+    \textbf{Label} & \textbf{Makna} & \textbf{Sikap program} \\
+    \midrule
+    \statusofficial & Sudah terjadi dan dipublikasikan pada 2026 & Digunakan sebagai fakta evaluasi. \\
+    \statusbase & Struktur 2026 yang relevan untuk persiapan awal & Dipakai sampai ada pengganti resmi. \\
+    \statusprojection & Skenario kerja StudentPro & Disiapkan secara adaptif dan dapat direvisi. \\
+    \statuswait & Belum diumumkan sebagai aturan 2027 & Tidak disampaikan sebagai kepastian. \\
+    \bottomrule
+  \end{tabularx}}
+\end{frame}
+
+% Slide 4 ---------------------------------------------------------------------
+\begin{frame}{Framework 2026 menjadi garis dasar sementara}
+  \kicker{Acuan yang Sudah Terpublikasi}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.20\textwidth}
+      \metric{2}{kelompok tes}
+    \end{column}
+    \begin{column}{0.20\textwidth}
+      \metric{7}{subtes}
+    \end{column}
+    \begin{column}{0.20\textwidth}
+      \metric{155}{butir soal}
+    \end{column}
+    \begin{column}{0.22\textwidth}
+      \metric{195}{menit tanpa jeda}
+    \end{column}
+  \end{columns}
+  \vspace{0.35cm}
+  \begin{beamercolorbox}[rounded=true,sep=0.20cm,wd=\textwidth]{block body}
+    \centering\bfseries Angka tersebut adalah ketentuan 2026, bukan janji bahwa 2027 pasti identik.
+  \end{beamercolorbox}
+\end{frame}
+
+% Slide 5 ---------------------------------------------------------------------
+\begin{frame}{Kemampuan inti diperkirakan tetap menjadi fondasi}
+  \kicker{Proyeksi dengan Risiko Perubahan Rendah}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.47\textwidth}
+      \begin{itemize}
+        \item Penalaran induktif, deduktif, dan kuantitatif.
+        \item Pemahaman kata, kalimat, dan hubungan gagasan.
+        \item Kemampuan membaca, menilai bukti, dan menyimpulkan.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \begin{itemize}
+        \item Pemodelan masalah dengan matematika.
+        \item Ketelitian dalam batas waktu.
+        \item Stamina menyelesaikan rangkaian subtes.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \vspace{0.26cm}
+  \claim{Belajar kemampuan inti tetap berguna meskipun detail format berubah.}
+\end{frame}
+
+% Slide 6 ---------------------------------------------------------------------
+\begin{frame}{Perubahan penting sudah terlihat pada hasil UTBK 2026}
+  \kicker{Literasi dalam Bahasa Indonesia}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.43\textwidth}
+      \metric{2}{rincian nilai LBI pada sertifikat: saintek dan soshum}
+    \end{column}
+    \begin{column}{0.51\textwidth}
+      \begin{block}{Makna perubahan}
+        Profil literasi peserta dibaca berdasarkan konteks keilmuan, sehingga satu skor total saja tidak cukup menjelaskan kekuatan dan kelemahan bacaan siswa.
+      \end{block}
+      \vspace{0.12cm}
+      {\color{StudentGreen}\bfseries\fontsize{11}{13.5}\selectfont Status: resmi terjadi pada sertifikat UTBK 2026.}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Slide 7 ---------------------------------------------------------------------
+\begin{frame}{Pemisahan skor LBI mengubah cara menganalisis latihan}
+  \kicker{Proyeksi Implikasi 2027}
+  {\fontsize{9.3}{11.5}\selectfont
+  \renewcommand{\arraystretch}{0.94}
+  \begin{tabularx}{\textwidth}{>{\bfseries\color{StudentBlue}}p{0.20\textwidth} >{\RaggedRight\arraybackslash}X >{\RaggedRight\arraybackslash}p{0.29\textwidth}}
+    \toprule
+    \textbf{Konteks} & \textbf{Bahan latihan} & \textbf{Data yang dibaca} \\
+    \midrule
+    Saintek & Fisika, kimia, biologi, lingkungan, kesehatan, dan teknologi & Akurasi menemukan bukti, hubungan sebab-akibat, data, dan istilah ilmiah. \\
+    Soshum & Ekonomi, sejarah, geografi sosial, kebijakan, dan masyarakat & Akurasi memahami argumen, kronologi, kepentingan, serta dampak sosial. \\
+    Personal & Sastra dan pengalaman manusia & Inferensi, sudut pandang, makna, dan refleksi; tetap dilatih sebagai bagian literasi. \\
+    \bottomrule
+  \end{tabularx}}
+\end{frame}
+
+% Slide 8 ---------------------------------------------------------------------
+\begin{frame}{Siswa tidak perlu memilih hanya satu jenis bacaan}
+  \kicker{Konsekuensi Pembimbingan}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.45\textwidth}
+      \claim{Semua siswa tetap berlatih saintek dan soshum.}
+      \vspace{0.20cm}
+      {\fontsize{11.5}{14.5}\selectfont Pemisahan profil bukan alasan mengabaikan konteks yang dianggap tidak sesuai dengan jurusan sekolah.}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \begin{itemize}
+        \item Diagnostik memisahkan hasil menurut konteks.
+        \item Remedial diarahkan pada jenis bacaan yang lemah.
+        \item Pengayaan menjaga konteks yang sudah kuat.
+        \item Tryout tetap menguji perpindahan konteks secara cepat.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Slide 9 ---------------------------------------------------------------------
+\begin{frame}{Muatan TWK ditempatkan sebagai skenario antisipasi}
+  \kicker{Status yang Harus Dijelaskan dengan Hati-hati}
+  {\fontsize{10.5}{13.2}\selectfont
+  \renewcommand{\arraystretch}{1.04}
+  \begin{tabularx}{\textwidth}{>{\RaggedRight\arraybackslash}p{0.27\textwidth} >{\RaggedRight\arraybackslash}p{0.23\textwidth} >{\RaggedRight\arraybackslash}X}
+    \toprule
+    \textbf{Pernyataan} & \textbf{Status} & \textbf{Tindakan StudentPro} \\
+    \midrule
+    Ada rencana mengantisipasi muatan wawasan kebangsaan dalam LBI & \statusprojection & Menambah bacaan bertema konstitusi, sejarah kebangsaan, kebinekaan, kewargaan, dan kebijakan publik. \\
+    TWK pasti menjadi subtes baru UTBK 2027 & \statuswait & Tidak digunakan sebagai klaim; menunggu framework resmi. \\
+    Jumlah soal dan bobot TWK sudah ditentukan & \statuswait & Tidak membuat simulasi berbobot khusus sebelum ada acuan. \\
+    \bottomrule
+  \end{tabularx}}
+\end{frame}
+
+% Slide 10 --------------------------------------------------------------------
+\begin{frame}{Latihan kebangsaan tetap dibangun sebagai literasi}
+  \kicker{Bukan Sekadar Hafalan Fakta}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.30\textwidth}
+      \begin{block}{Menemukan}
+        Mengambil informasi eksplisit dari teks, tabel, atau kutipan dokumen.
+      \end{block}
+    \end{column}
+    \begin{column}{0.30\textwidth}
+      \begin{block}{Menilai}
+        Memeriksa alasan, bukti, konsistensi, dan sudut pandang.
+      \end{block}
+    \end{column}
+    \begin{column}{0.30\textwidth}
+      \begin{block}{Merefleksikan}
+        Menghubungkan prinsip kebangsaan dengan persoalan masyarakat.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vspace{0.30cm}
+  \centering
+  {\color{StudentNavy}\bfseries\fontsize{14}{17}\selectfont Materi tambahan memperkuat literasi meskipun skenario TWK tidak jadi diterapkan.}
+\end{frame}
+
+% Slide 11 --------------------------------------------------------------------
+\begin{frame}{Tiga skenario menjaga program tetap siap}
+  \kicker{Perencanaan Adaptif UTBK 2027}
+  {\fontsize{10.1}{12.6}\selectfont
+  \renewcommand{\arraystretch}{1.00}
+  \begin{tabularx}{\textwidth}{>{\bfseries\color{StudentBlue}}p{0.19\textwidth} >{\RaggedRight\arraybackslash}p{0.29\textwidth} >{\RaggedRight\arraybackslash}X}
+    \toprule
+    \textbf{Skenario} & \textbf{Kemungkinan bentuk} & \textbf{Respons program} \\
+    \midrule
+    A. Berlanjut & Struktur 2027 sangat dekat dengan 2026 & Materi inti dan simulasi 155 soal/195 menit diteruskan. \\
+    B. Penyesuaian & Struktur sama, tetapi konteks, komposisi, atau pelaporan skor berubah & Bank soal dan analisis diperbarui tanpa mengulang program dari awal. \\
+    C. Perubahan besar & Ada perubahan subtes, jumlah soal, waktu, atau tata cara & Jadwal, paket tryout, dan target waktu dikalibrasi ulang setelah pengumuman resmi. \\
+    \bottomrule
+  \end{tabularx}}
+\end{frame}
+
+% Slide 12 --------------------------------------------------------------------
+\begin{frame}{Keputusan program mengikuti tingkat kepastian informasi}
+  \kicker{Gerbang Keputusan}
+  {\fontsize{9.4}{11.7}\selectfont
+  \renewcommand{\arraystretch}{0.94}
+  \begin{tabularx}{\textwidth}{>{\bfseries\color{StudentBlue}}p{0.18\textwidth} >{\RaggedRight\arraybackslash}p{0.30\textwidth} >{\RaggedRight\arraybackslash}X}
+    \toprule
+    \textbf{Tahap} & \textbf{Bukti yang tersedia} & \textbf{Keputusan} \\
+    \midrule
+    Persiapan awal & Framework 2026 dan evaluasi internal & Bangun konsep, literasi, penalaran, kebiasaan, dan stamina. \\
+    Pengumuman resmi & Framework/ketentuan SNPMB 2027 & Petakan perubahan dan revisi materi prioritas. \\
+    Uji diagnostik & Data aktual siswa & Tentukan remedial dan pengayaan per subtes/konteks. \\
+    Simulasi penuh & Tren tryout dan waktu pengerjaan & Sesuaikan strategi, target skor, dan pilihan program studi. \\
+    \bottomrule
+  \end{tabularx}}
+  \vspace{0.03cm}
+  \centering
+  {\color{StudentNavy}\bfseries\fontsize{9.8}{12}\selectfont Setiap perubahan harus berujung pada tindakan yang jelas.}
+\end{frame}
+
+% Slide 13 --------------------------------------------------------------------
+\begin{frame}{StudentPro disiapkan agar perubahan tidak mengganggu siswa}
+  \kicker{Kesiapan Sistem}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.47\textwidth}
+      \begin{itemize}
+        \item Materi dan bank soal diberi label subtes, indikator, serta konteks.
+        \item Paket latihan dapat diubah tanpa menghilangkan riwayat siswa.
+        \item Tryout dapat menyesuaikan urutan, durasi, dan jumlah soal.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \begin{itemize}
+        \item Hasil LBI dapat dianalisis menurut konteks saintek dan soshum.
+        \item Dashboard menampilkan tren, akurasi, waktu, dan tindak lanjut.
+        \item Versi materi mencatat perubahan setelah acuan resmi terbit.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \vspace{0.18cm}
+  \begin{beamercolorbox}[rounded=true,sep=0.18cm,wd=\textwidth]{block body}
+    \centering\bfseries Tujuan sistem: perubahan format tidak memutus kesinambungan belajar.
+  \end{beamercolorbox}
+\end{frame}
+
+% Slide 14 --------------------------------------------------------------------
+\begin{frame}{Prioritas belajar dibagi menjadi tetap dan adaptif}
+  \kicker{Apa yang Dikerjakan Sekarang?}
+  {\fontsize{10.1}{12.6}\selectfont
+  \renewcommand{\arraystretch}{1.01}
+  \begin{tabularx}{\textwidth}{>{\bfseries\color{StudentBlue}}p{0.23\textwidth} >{\RaggedRight\arraybackslash}X >{\RaggedRight\arraybackslash}p{0.30\textwidth}}
+    \toprule
+    \textbf{Prioritas} & \textbf{Dikerjakan sejak awal} & \textbf{Disesuaikan setelah resmi} \\
+    \midrule
+    Konsep inti & Penalaran, bahasa, matematika, literasi, dan membaca data & Cakupan indikator yang berubah \\
+    Kecepatan & Strategi memilih soal dan mengendalikan waktu & Target waktu per subtes \\
+    LBI & Latihan saintek, soshum, dan personal & Proporsi serta cara pelaporan \\
+    Simulasi & Paket bertahap dan tryout dasar 2026 & Jumlah soal, urutan, durasi, dan tata cara 2027 \\
+    \bottomrule
+  \end{tabularx}}
+\end{frame}
+
+% Slide 15 --------------------------------------------------------------------
+\begin{frame}{Informasi resmi dipantau melalui indikator yang jelas}
+  \kicker{Sinyal yang Akan Mengubah Program}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.46\textwidth}
+      \begin{itemize}
+        \item Terbitnya framework UTBK--SNBT 2027.
+        \item Pengumuman jumlah subtes, soal, dan durasi.
+        \item Perubahan ketentuan peserta dan pilihan program studi.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{itemize}
+        \item Penjelasan resmi tentang rincian skor LBI.
+        \item Konfirmasi ada/tidaknya muatan kebangsaan.
+        \item Contoh soal atau penjelasan kompetensi dari SNPMB.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \vspace{0.20cm}
+  \claim{Rumor tidak menjadi dasar perubahan program.}
+\end{frame}
+
+% Slide 16 --------------------------------------------------------------------
+\begin{frame}{Orang tua dapat membantu tanpa ikut menebak format}
+  \kicker{Sikap Pendampingan di Rumah}
+  \begin{itemize}
+    \item Dorong siswa menguasai kemampuan inti yang tidak mudah kedaluwarsa.
+    \item Tanyakan kemajuan per subtes dan konteks bacaan, bukan hanya nilai total.
+    \item Jangan membeli banyak program tambahan hanya karena rumor perubahan.
+    \item Gunakan laporan StudentPro untuk melihat konsistensi dan tindak lanjut.
+    \item Tunggu informasi sekolah setelah framework resmi 2027 diterbitkan.
+  \end{itemize}
+  \vspace{0.20cm}
+  \begin{beamercolorbox}[rounded=true,sep=0.20cm,wd=\textwidth]{block body}
+    \centering\bfseries Ketenangan orang tua membantu siswa menjaga fokus pada proses yang dapat dikendalikan.
+  \end{beamercolorbox}
+\end{frame}
+
+% Slide 17 --------------------------------------------------------------------
+\begin{frame}{Kesimpulan proyeksi UTBK 2027}
+  \kicker{Arah Program}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.30\textwidth}
+      \begin{block}{Kuatkan fondasi}
+        Penalaran, literasi, matematika, bahasa, ketelitian, dan stamina.
+      \end{block}
+    \end{column}
+    \begin{column}{0.30\textwidth}
+      \begin{block}{Siapkan skenario}
+        LBI per konteks diperkuat; bacaan kebangsaan disiapkan secara proporsional.
+      \end{block}
+    \end{column}
+    \begin{column}{0.30\textwidth}
+      \begin{block}{Tunggu keputusan}
+        Format akhir, bobot, jumlah soal, durasi, dan aturan mengikuti SNPMB 2027.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vspace{0.30cm}
+  \centering
+  {\color{StudentNavy}\bfseries\fontsize{15}{18}\selectfont Siap berubah, tetapi tidak belajar berdasarkan spekulasi.}
+\end{frame}
+
+% Slide 18 --------------------------------------------------------------------
+\begin{frame}{Sumber resmi}
+  \kicker{Rujukan Bab 3 -- Bagian 1}
+  {\color{StudentBlue}\bfseries\fontsize{15}{18}\selectfont 1. Panitia SNPMB}\par
+  \vspace{0.06cm}
+  {\fontsize{12.5}{15.5}\selectfont ``Framework UTBK--SNBT Tahun 2026.''}\par
+  {\fontsize{11.5}{14}\selectfont\href{https://snpmb.id/fr/}{https://snpmb.id/fr/}}\par
+  {\color{StudentGray}\fontsize{11}{13.5}\selectfont Sumber resmi kelompok tes, subtes, tujuan, jumlah soal, dan durasi.}\par
+  \vspace{0.38cm}
+  {\color{StudentBlue}\bfseries\fontsize{15}{18}\selectfont 2. Panitia SNPMB}\par
+  \vspace{0.06cm}
+  {\fontsize{12.5}{15.5}\selectfont ``Informasi Umum UTBK--SNBT 2026.''}\par
+  {\fontsize{11.2}{13.8}\selectfont\href{https://snpmb.id/utbk-snbt/informasi-umum}{snpmb.id/utbk-snbt/informasi-umum}}\par
+  {\color{StudentGray}\fontsize{11}{13.5}\selectfont Digunakan sebagai batas ketentuan resmi yang telah terpublikasi.}\par
+\end{frame}
+
+% Slide 19 --------------------------------------------------------------------
+\begin{frame}{Sumber perubahan skor dan catatan proyeksi}
+  \kicker{Rujukan Bab 3 -- Bagian 2}
+  {\color{StudentBlue}\bfseries\fontsize{13.5}{16}\selectfont 3. DetikEdu -- 26 Mei 2026}\par
+  \vspace{0.03cm}
+  {\fontsize{10}{12.2}\selectfont ``Skor LBI di Sertifikat UTBK 2026 Dipecah Saintek--Soshum, SNPMB Jelaskan Mengapa.''}\par
+  {\fontsize{9.2}{11.2}\selectfont\href{https://www.detik.com/edu/seleksi-masuk-pt/d-8505258/}{detik.com/edu/seleksi-masuk-pt/d-8505258/}}\par
+  {\color{StudentGray}\fontsize{9.2}{11.2}\selectfont Laporan konferensi pers hasil SNBT 2026 yang mengutip Ketua Umum Tim Penanggung Jawab SNPMB 2026.}\par
+  \vspace{0.18cm}
+  {\color{StudentBlue}\bfseries\fontsize{13.5}{16}\selectfont 4. Catatan perencanaan internal StudentPro}\par
+  \vspace{0.03cm}
+  {\fontsize{10}{12.2}\selectfont Skenario integrasi muatan wawasan kebangsaan dalam latihan LBI.}\par
+  {\color{StudentGray}\fontsize{9.2}{11.2}\selectfont Status: antisipasi internal; bukan bukti bahwa TWK telah ditetapkan sebagai subtes atau komponen resmi UTBK 2027.}\par
+  \vfill
+  \begin{beamercolorbox}[rounded=true,sep=0.14cm,wd=\textwidth]{block body}
+    \centering\bfseries Materi ini wajib diperbarui ketika framework SNPMB 2027 diterbitkan.
+  \end{beamercolorbox}
+\end{frame}
+
+% Slide 20 --------------------------------------------------------------------
+\begin{frame}{Status dokumen pada saat penyusunan}
+  \kicker{Catatan Kehati-hatian}
+  \claim{Framework resmi UTBK--SNBT 2027 belum digunakan karena belum ditemukan pada laman framework SNPMB saat Bab 3 disusun.}
+  \vspace{0.30cm}
+  {\fontsize{11.5}{14.5}\selectfont
+  Oleh karena itu, seluruh pernyataan tentang kesinambungan format 2026, pengembangan pelaporan LBI, dan integrasi muatan wawasan kebangsaan diperlakukan sebagai proyeksi kerja.}
+  \vspace{0.28cm}
+  \begin{beamercolorbox}[rounded=true,sep=0.20cm,wd=\textwidth]{block body}
+    \centering\bfseries Bab 4 selanjutnya membahas pelaksanaan pembimbingan UTBK 2026 di SMAN 1 Muntilan.
+  \end{beamercolorbox}
+\end{frame}
+
+\end{document}
