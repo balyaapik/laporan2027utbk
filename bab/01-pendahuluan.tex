@@ -1,0 +1,328 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+% -----------------------------------------------------------------------------
+% Identitas dan palet StudentPro
+% -----------------------------------------------------------------------------
+\definecolor{StudentNavy}{HTML}{0B1F3A}
+\definecolor{StudentBlue}{HTML}{1769E0}
+\definecolor{StudentCyan}{HTML}{18B6C9}
+\definecolor{StudentGold}{HTML}{F4B942}
+\definecolor{StudentInk}{HTML}{182230}
+\definecolor{StudentMist}{HTML}{EFF5FB}
+\definecolor{StudentSoft}{HTML}{D9E7F5}
+\definecolor{StudentGray}{HTML}{607086}
+\definecolor{StudentWhite}{HTML}{FFFFFF}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=StudentBlue,
+  linkcolor=StudentBlue
+}
+
+\setbeamercolor{normal text}{fg=StudentInk,bg=StudentWhite}
+\setbeamercolor{structure}{fg=StudentBlue}
+\setbeamercolor{frametitle}{fg=StudentNavy,bg=StudentWhite}
+\setbeamercolor{title}{fg=StudentWhite}
+\setbeamercolor{subtitle}{fg=StudentSoft}
+\setbeamercolor{author}{fg=StudentWhite}
+\setbeamercolor{date}{fg=StudentSoft}
+\setbeamercolor{block title}{fg=StudentWhite,bg=StudentBlue}
+\setbeamercolor{block body}{fg=StudentInk,bg=StudentMist}
+\setbeamercolor{alerted text}{fg=StudentBlue}
+
+\setbeamerfont{title}{series=\bfseries,size=\fontsize{30}{35}\selectfont}
+\setbeamerfont{subtitle}{size=\fontsize{16}{20}\selectfont}
+\setbeamerfont{author}{series=\bfseries,size=\fontsize{16}{19}\selectfont}
+\setbeamerfont{date}{size=\fontsize{12}{15}\selectfont}
+\setbeamerfont{frametitle}{series=\bfseries,size=\fontsize{23}{27}\selectfont}
+\setbeamerfont{normal text}{size=\fontsize{16}{20}\selectfont}
+\setbeamerfont{block title}{series=\bfseries,size=\fontsize{15}{18}\selectfont}
+\setbeamerfont{block body}{size=\fontsize{14}{18}\selectfont}
+\setbeamerfont{footline}{size=\fontsize{8}{10}\selectfont}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{itemize item}{\color{StudentCyan}\raisebox{0.12ex}{\scriptsize$\blacktriangleright$}}
+\setbeamertemplate{itemize subitem}{\color{StudentBlue}\scriptsize$\bullet$}
+\setlength{\leftmargini}{1.2em}
+\setlength{\leftmarginii}{1.1em}
+
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,leftskip=0.7cm,rightskip=0.7cm,sep=0.18cm]{frametitle}
+    \usebeamerfont{frametitle}\insertframetitle\par
+    \color{StudentCyan}\rule{\dimexpr\paperwidth-1.8cm\relax}{0.8pt}
+  \end{beamercolorbox}
+}
+
+\setbeamertemplate{footline}{%
+  \leavevmode
+  \hbox{%
+    \begin{beamercolorbox}[wd=.64\paperwidth,ht=2.7ex,dp=1.2ex,leftskip=.7cm]{author in head/foot}%
+      \color{StudentGray}\usebeamerfont{footline}StudentPro \textbar\ SMAN 1 Muntilan
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.34\paperwidth,ht=2.7ex,dp=1.2ex,center]{date in head/foot}%
+      \color{StudentBlue}\usebeamerfont{footline}Bab 1 \textbar\ \insertframenumber/\inserttotalframenumber
+    \end{beamercolorbox}%
+  }
+}
+
+\newcommand{\kicker}[1]{%
+  {\color{StudentCyan}\bfseries\fontsize{12}{14}\selectfont\MakeUppercase{#1}}\par\vspace{0.15cm}
+}
+
+\newcommand{\claim}[1]{%
+  {\color{StudentNavy}\bfseries\fontsize{22}{27}\selectfont #1}\par
+}
+
+\newcommand{\source}[1]{%
+  \vfill
+  {\color{StudentGray}\fontsize{7.5}{9}\selectfont Sumber: #1}\par
+}
+
+\newcommand{\metric}[2]{%
+  {\color{StudentBlue}\bfseries\fontsize{27}{30}\selectfont #1}\par
+  \vspace{0.05cm}
+  {\color{StudentGray}\fontsize{12}{15}\selectfont #2}
+}
+
+\title{Pendahuluan dan Tujuan\\Pembimbingan UTBK 2027}
+\subtitle{Bab 1 \textbar\ Program SMAN 1 Muntilan berbasis data dan LMS StudentPro}
+\author{Balya Rochmadi}
+\date{Tahun Ajaran 2026/2027}
+
+\begin{document}
+
+% Slide 1 ---------------------------------------------------------------------
+\begingroup
+\setbeamercolor{background canvas}{bg=StudentNavy}
+\begin{frame}[plain]
+  \vspace{0.75cm}
+  \kicker{Rencana Pembimbingan}
+  \vspace{0.1cm}
+  {\usebeamerfont{title}\color{StudentWhite}\inserttitle\par}
+  \vspace{0.45cm}
+  {\usebeamerfont{subtitle}\color{StudentSoft}\insertsubtitle\par}
+  \vfill
+  {\color{StudentGold}\rule{2.2cm}{2.5pt}}\par
+  \vspace{0.22cm}
+  {\usebeamerfont{author}\color{StudentWhite}\insertauthor}\par
+  {\usebeamerfont{date}\color{StudentSoft}\insertdate}
+  \vspace{0.45cm}
+\end{frame}
+\endgroup
+
+% Slide 2 ---------------------------------------------------------------------
+\begin{frame}{UTBK menuntut lebih dari hafalan}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.57\textwidth}
+      \kicker{Titik Berangkat}
+      \claim{Keberhasilan ditentukan oleh penalaran, literasi, ketepatan strategi, dan kendali waktu.}
+      \vspace{0.35cm}
+      {\fontsize{15}{19}\selectfont
+      Framework resmi 2026 menempatkan peserta dalam dua kelompok tes, tujuh subtes, dan waktu total 195 menit tanpa istirahat.}
+    \end{column}
+    \begin{column}{0.37\textwidth}
+      \vspace{0.18cm}
+      \begin{block}{Implikasi untuk 2027}
+        Pembimbingan harus melatih proses berpikir dan keputusan saat tertekan waktu, bukan sekadar menambah jumlah soal.
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Slide 3 ---------------------------------------------------------------------
+\begin{frame}{Tiga dasar penyusunan program 2027}
+  \kicker{Keputusan Berbasis Bukti}
+  \vspace{0.05cm}
+  {\fontsize{13}{16}\selectfont
+  \renewcommand{\arraystretch}{1.08}
+  \begin{tabularx}{\textwidth}{>{\bfseries\color{StudentBlue}}p{0.23\textwidth} >{\RaggedRight\arraybackslash}X}
+    \toprule
+    Kerangka resmi & Acuan kompetensi, jenis tes, dan tuntutan pengerjaan. \\
+    Evaluasi 2026 & Dasar menemukan pola yang perlu dipertahankan atau diperbaiki. \\
+    Data LMS & Dasar menentukan tindak lanjut belajar setiap siswa. \\
+    \bottomrule
+  \end{tabularx}}
+  \vspace{0.22cm}
+  {\color{StudentNavy}\bfseries\fontsize{13}{16}\selectfont Fakta resmi, data internal, dan proyeksi diberi label yang berbeda.}
+\end{frame}
+
+% Slide 4 ---------------------------------------------------------------------
+\begin{frame}{LBI berubah: skoring dan muatan}
+  \kicker{Arah Penyesuaian 2027}
+  {\fontsize{13}{16}\selectfont
+  \renewcommand{\arraystretch}{1.10}
+  \begin{tabularx}{\textwidth}{>{\bfseries\color{StudentBlue}}p{0.23\textwidth} >{\RaggedRight\arraybackslash}X}
+    Hasil 2026 & Skor LBI dirinci menjadi konteks \textbf{saintek} dan \textbf{soshum}. \\
+    Rencana 2027 & Muatan \textbf{Tes Wawasan Kebangsaan} direncanakan masuk ke LBI; bentuk final menunggu publikasi resmi. \\
+    Kesiapan LMS & Soal dan skor LBI ditandai per konteks, termasuk wawasan kebangsaan. \\
+  \end{tabularx}}
+\end{frame}
+
+% Slide 5 ---------------------------------------------------------------------
+\begin{frame}{Kebutuhan siswa tidak sama}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.46\textwidth}
+      \kicker{Kondisi Umum}
+      \claim{Materi yang sama tidak selalu menghasilkan kemajuan yang sama.}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \begin{itemize}
+        \item Ada siswa yang lemah pada konsep dasar.
+        \item Ada yang memahami materi, tetapi lambat mengambil keputusan.
+        \item Ada yang stabil di latihan, tetapi menurun saat tryout penuh.
+        \item Ada yang membutuhkan strategi pilihan program studi yang lebih realistis.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \vspace{0.35cm}
+  \begin{beamercolorbox}[rounded=true,sep=0.23cm,wd=\textwidth]{block body}
+    \centering\bfseries Program 2027 harus mampu mengubah hasil tes menjadi intervensi yang spesifik.
+  \end{beamercolorbox}
+\end{frame}
+
+% Slide 6 ---------------------------------------------------------------------
+\begin{frame}{Tujuan pembimbingan UTBK 2027}
+  \kicker{Hasil yang Diharapkan}
+  \begin{enumerate}
+    \item Memetakan kemampuan awal siswa sampai tingkat subtes dan indikator.
+    \item Menyediakan materi yang terstruktur, bertahap, dan mudah diakses.
+    \item Membentuk kebiasaan mengerjakan soal secara akurat dalam batas waktu.
+    \item Memberikan remedial dan pengayaan berdasarkan bukti hasil belajar.
+    \item Mendampingi pemilihan program studi dengan pertimbangan kemampuan dan peluang.
+    \item Menjaga konsistensi belajar melalui monitoring sekolah dan StudentPro.
+  \end{enumerate}
+\end{frame}
+
+% Slide 7 ---------------------------------------------------------------------
+\begin{frame}{Indikator proses menopang target akhir}
+  \kicker{Ukuran Keberhasilan}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.28\textwidth}
+      \metric{70\%}{target siswa peserta program diterima di perguruan tinggi tujuan melalui jalur yang direncanakan.}
+    \end{column}
+    \begin{column}{0.66\textwidth}
+      \begin{itemize}
+        \item Seluruh siswa mengikuti diagnostik awal.
+        \item Progres materi dan latihan tercatat secara konsisten.
+        \item Nilai tryout menunjukkan tren yang dapat dijelaskan.
+        \item Kelemahan indikator memperoleh remedial yang terukur.
+        \item Setiap keputusan jurusan didukung data akademik dan konsultasi.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \vspace{0.25cm}
+  {\color{StudentGray}\fontsize{10.5}{13}\selectfont Target 70\% adalah sasaran internal StudentPro, bukan ketentuan SNPMB.}
+\end{frame}
+
+% Slide 8 ---------------------------------------------------------------------
+\begin{frame}{Lima prinsip pembimbingan ke depan}
+  \kicker{Cara Kerja Program}
+  {\fontsize{13.5}{17}\selectfont
+  \begin{itemize}
+    \item \textbf{Diagnosis dahulu.} Materi dipilih setelah kemampuan awal diketahui.
+    \item \textbf{Sedikit tetapi konsisten.} Latihan rutin selalu disertai evaluasi.
+    \item \textbf{Umpan balik cepat.} Kesalahan dibahas sebelum menjadi pola.
+    \item \textbf{Simulasi autentik.} Tryout melatih waktu, stamina, dan keputusan.
+    \item \textbf{Tindak lanjut individual.} Data siswa menentukan intervensi berikutnya.
+  \end{itemize}}
+\end{frame}
+
+% Slide 9 ---------------------------------------------------------------------
+\begin{frame}{StudentPro menjadi tulang punggung program}
+  \kicker{Satu Siklus Pembelajaran}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.23\textwidth}
+      \textbf{Belajar}\par
+      \vspace{0.12cm}
+      {\fontsize{12.5}{15.5}\selectfont Materi per subtes, capaian membaca, dan akses semi-offline.}
+    \end{column}
+    \begin{column}{0.23\textwidth}
+      \textbf{Berlatih}\par
+      \vspace{0.12cm}
+      {\fontsize{12.5}{15.5}\selectfont Kuis bertingkat, bank soal, paket subtes, dan tryout penuh.}
+    \end{column}
+    \begin{column}{0.23\textwidth}
+      \textbf{Menganalisis}\par
+      \vspace{0.12cm}
+      {\fontsize{12.5}{15.5}\selectfont Skor, waktu, ketuntasan, serta rincian LBI saintek dan soshum.}
+    \end{column}
+    \begin{column}{0.23\textwidth}
+      \textbf{Menindaklanjuti}\par
+      \vspace{0.12cm}
+      {\fontsize{12.5}{15.5}\selectfont Remedial, pengayaan, konsultasi, dan rekomendasi belajar berikutnya.}
+    \end{column}
+  \end{columns}
+  \vspace{0.15cm}
+  {\color{StudentBlue}\bfseries\fontsize{12}{15}\selectfont Data selalu berakhir pada keputusan: lanjut, remedial, pengayaan, atau konsultasi.}
+\end{frame}
+
+% Slide 10 --------------------------------------------------------------------
+\begin{frame}{Setiap pihak memegang peran berbeda}
+  \kicker{Akuntabilitas Bersama}
+  {\fontsize{13}{16}\selectfont
+  \renewcommand{\arraystretch}{0.98}
+  \begin{tabularx}{\textwidth}{>{\bfseries\color{StudentBlue}}p{0.20\textwidth} >{\RaggedRight\arraybackslash}X}
+    Sekolah & Menetapkan kebijakan, jadwal, dukungan, dan tindak lanjut. \\
+    Tentor & Menyusun materi, menganalisis kesalahan, dan menentukan remedial. \\
+    Guru BK & Mendampingi motivasi dan pilihan program studi. \\
+    Siswa & Menuntaskan materi, latihan, tryout, dan rencana perbaikan. \\
+    StudentPro & Menyatukan aktivitas, hasil, umpan balik, dan monitoring. \\
+  \end{tabularx}}
+\end{frame}
+
+% Slide 11 --------------------------------------------------------------------
+\begin{frame}{Bab berikutnya menetapkan titik acuan}
+  \kicker{Transisi ke Bab 2}
+  \claim{Sebelum merancang latihan 2027, sekolah perlu memahami dengan tepat apa yang diukur UTBK 2026.}
+  \vspace{0.45cm}
+  \begin{itemize}
+    \item Bab 2 menguraikan dua kelompok tes dan tujuh subtes.
+    \item Jumlah soal, waktu, tujuan, serta tuntutan kognitif ditulis berdasarkan sumber resmi.
+    \item Perubahan 2027 baru dinyatakan resmi setelah dipublikasikan oleh SNPMB.
+  \end{itemize}
+\end{frame}
+
+% Slide 12 --------------------------------------------------------------------
+\begin{frame}{Sumber resmi dan publik}
+  \kicker{Rujukan Bab 1 - Bagian 1}
+  {\color{StudentBlue}\bfseries\fontsize{16}{19}\selectfont 1. Panitia SNPMB}\par
+  \vspace{0.08cm}
+  {\fontsize{13}{16}\selectfont ``Framework UTBK-SNBT Tahun 2026.''}\par
+  {\fontsize{12}{15}\selectfont\href{https://snpmb.id/fr/}{https://snpmb.id/fr/}}\par
+  {\color{StudentGray}\fontsize{11.5}{14}\selectfont Sumber resmi struktur, tujuan tes, jumlah soal, waktu, dan tuntutan kompetensi.}\par
+  \vspace{0.38cm}
+  {\color{StudentBlue}\bfseries\fontsize{16}{19}\selectfont 2. DetikEdu - 26 Mei 2026}\par
+  \vspace{0.08cm}
+  {\fontsize{13}{16}\selectfont ``Skor LBI di Sertifikat UTBK 2026 Dipecah Saintek-Soshum, SNPMB Jelaskan Mengapa.''}\par
+  {\fontsize{11.5}{14}\selectfont\href{https://www.detik.com/edu/seleksi-masuk-pt/d-8505258/}{detik.com/edu/seleksi-masuk-pt/d-8505258/}}\par
+  {\color{StudentGray}\fontsize{11.5}{14}\selectfont Laporan konferensi pers yang mengutip pimpinan SNPMB 2026.}\par
+\end{frame}
+
+% Slide 13 --------------------------------------------------------------------
+\begin{frame}{Sumber internal dan status TWK}
+  \kicker{Rujukan Bab 1 - Bagian 2}
+  {\color{StudentBlue}\bfseries\fontsize{16}{19}\selectfont 3. Dokumen internal StudentPro}\par
+  \vspace{0.08cm}
+  {\fontsize{13}{16}\selectfont ``LPJ Pembimbingan UTBK 2026.'' Penyusun: Balya Rochmadi.}\par
+  {\color{StudentGray}\fontsize{11.5}{14}\selectfont Sumber rancangan program, target internal, dan evaluasi pembimbingan.}\par
+  \vspace{0.55cm}
+  {\color{StudentBlue}\bfseries\fontsize{16}{19}\selectfont 4. Rencana integrasi TWK ke LBI}\par
+  \vspace{0.08cm}
+  {\fontsize{13}{16}\selectfont Informasi perencanaan untuk mengantisipasi kemungkinan muatan wawasan kebangsaan dalam LBI.}\par
+  {\color{StudentGray}\fontsize{11.5}{14}\selectfont Status: belum diposisikan sebagai ketentuan resmi sampai dokumen SNPMB 2027 diterbitkan.}\par
+\end{frame}
+
+\end{document}
