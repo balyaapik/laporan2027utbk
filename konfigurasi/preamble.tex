@@ -1,6 +1,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern}
+\usepackage{mathptmx}
+\usefonttheme{serif}
 \usepackage{microtype}
 \usepackage{booktabs}
 \usepackage{tabularx}
@@ -9,6 +10,7 @@
 \usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{amsmath}
+\usepackage[authoryear,round]{natbib}
 
 \definecolor{StudentNavy}{HTML}{102A43}
 \definecolor{StudentBlue}{HTML}{1769E0}
@@ -28,6 +30,7 @@
   urlcolor=StudentBlue,
   linkcolor=StudentBlue
 }
+\pdfstringdefDisableCommands{\def\translate#1{#1}}
 
 \setbeamercolor{normal text}{fg=StudentInk,bg=StudentWhite}
 \setbeamercolor{structure}{fg=StudentBlue}
@@ -51,6 +54,7 @@
 \setbeamerfont{footline}{size=\fontsize{8}{10}\selectfont}
 
 \setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{bibliography item}[text]
 \setbeamertemplate{items}[circle]
 \setbeamertemplate{itemize item}{\color{StudentCyan}\raisebox{0.12ex}{\scriptsize$\blacktriangleright$}}
 \setbeamertemplate{itemize subitem}{\color{StudentBlue}\scriptsize$\bullet$}
