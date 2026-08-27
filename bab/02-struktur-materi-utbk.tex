@@ -1,0 +1,581 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+\definecolor{StudentNavy}{HTML}{102A43}
+\definecolor{StudentBlue}{HTML}{1769E0}
+\definecolor{StudentCyan}{HTML}{14A6B8}
+\definecolor{StudentGold}{HTML}{E8A628}
+\definecolor{StudentInk}{HTML}{243B53}
+\definecolor{StudentMist}{HTML}{F2F7FC}
+\definecolor{StudentSoft}{HTML}{D9E8F5}
+\definecolor{StudentGray}{HTML}{627D98}
+\definecolor{StudentWhite}{HTML}{FFFFFF}
+\definecolor{StudentGreen}{HTML}{2B8A6E}
+
+\hypersetup{colorlinks=true,urlcolor=StudentBlue,linkcolor=StudentBlue}
+
+\setbeamercolor{normal text}{fg=StudentInk,bg=StudentWhite}
+\setbeamercolor{structure}{fg=StudentBlue}
+\setbeamercolor{frametitle}{fg=StudentNavy,bg=StudentWhite}
+\setbeamercolor{title}{fg=StudentWhite}
+\setbeamercolor{subtitle}{fg=StudentSoft}
+\setbeamercolor{author}{fg=StudentWhite}
+\setbeamercolor{date}{fg=StudentSoft}
+\setbeamercolor{block title}{fg=StudentWhite,bg=StudentBlue}
+\setbeamercolor{block body}{fg=StudentInk,bg=StudentMist}
+
+\setbeamerfont{title}{series=\bfseries,size=\fontsize{29}{34}\selectfont}
+\setbeamerfont{subtitle}{size=\fontsize{14.5}{18}\selectfont}
+\setbeamerfont{author}{series=\bfseries,size=\fontsize{15}{18}\selectfont}
+\setbeamerfont{date}{size=\fontsize{11.5}{14}\selectfont}
+\setbeamerfont{frametitle}{series=\bfseries,size=\fontsize{19.5}{23}\selectfont}
+\setbeamerfont{normal text}{size=\fontsize{13.5}{17}\selectfont}
+\setbeamerfont{block title}{series=\bfseries,size=\fontsize{13}{16}\selectfont}
+\setbeamerfont{block body}{size=\fontsize{12}{15.5}\selectfont}
+\setbeamerfont{footline}{size=\fontsize{8}{10}\selectfont}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{itemize item}{\color{StudentCyan}\raisebox{0.12ex}{\scriptsize$\blacktriangleright$}}
+\setbeamertemplate{itemize subitem}{\color{StudentBlue}\scriptsize$\bullet$}
+\setlength{\leftmargini}{1.2em}
+\setlength{\leftmarginii}{1.1em}
+
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,leftskip=0.7cm,rightskip=0.7cm,sep=0.17cm]{frametitle}
+    \rightskip=0pt plus 1fil\relax\usebeamerfont{frametitle}\insertframetitle\par
+    \color{StudentCyan}\rule{\dimexpr\paperwidth-1.8cm\relax}{0.8pt}
+  \end{beamercolorbox}
+}
+
+\setbeamertemplate{footline}{%
+  \leavevmode
+  \hbox{%
+    \begin{beamercolorbox}[wd=.67\paperwidth,ht=2.7ex,dp=1.2ex,leftskip=.7cm]{author in head/foot}%
+      \color{StudentGray}\usebeamerfont{footline}Sosialisasi Orang Tua \textbar\ SMAN 1 Muntilan
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.31\paperwidth,ht=2.7ex,dp=1.2ex,center]{date in head/foot}%
+      \color{StudentBlue}\usebeamerfont{footline}Bab 2 \textbar\ \insertframenumber/\inserttotalframenumber
+    \end{beamercolorbox}%
+  }
+}
+
+\newcommand{\kicker}[1]{%
+  {\color{StudentCyan}\bfseries\fontsize{10.5}{13}\selectfont\MakeUppercase{#1}}\par\vspace{0.11cm}
+}
+
+\newcommand{\claim}[1]{%
+  {\color{StudentNavy}\bfseries\fontsize{18}{22}\selectfont #1}\par
+}
+
+\newcommand{\metric}[2]{%
+  {\color{StudentBlue}\bfseries\fontsize{27}{30}\selectfont #1}\par
+  \vspace{0.03cm}
+  {\color{StudentGray}\fontsize{11.3}{14}\selectfont #2}
+}
+
+\newcommand{\answer}[1]{%
+  \vspace{0.10cm}
+  {\color{StudentGreen}\bfseries\fontsize{11.5}{14}\selectfont Jawaban: #1}
+}
+
+\newcommand{\statusok}{\textcolor{StudentGreen}{\bfseries RESMI 2026}}
+\newcommand{\statuswait}{\textcolor{StudentGold}{\bfseries ANTISIPASI 2027}}
+
+\title{Struktur, Materi, dan Contoh\\UTBK-SNBT}
+\subtitle{Bab 2 \textbar\ Memahami tujuh subtes sebagai acuan pembimbingan 2027}
+\author{Balya Rochmadi}
+\date{Untuk Orang Tua/Wali Siswa \textbar\ Tahun Ajaran 2026/2027}
+
+\begin{document}
+
+% Slide 1 ---------------------------------------------------------------------
+\begingroup
+\setbeamercolor{background canvas}{bg=StudentNavy}
+\begin{frame}[plain]
+  \vspace{0.65cm}
+  \kicker{SMAN 1 Muntilan \textbar\ StudentPro}
+  \vspace{0.08cm}
+  {\usebeamerfont{title}\color{StudentWhite}\inserttitle\par}
+  \vspace{0.36cm}
+  {\usebeamerfont{subtitle}\color{StudentSoft}\insertsubtitle\par}
+  \vfill
+  {\color{StudentGold}\rule{2.3cm}{2.5pt}}\par
+  \vspace{0.20cm}
+  {\usebeamerfont{author}\color{StudentWhite}\insertauthor}\par
+  {\usebeamerfont{date}\color{StudentSoft}\insertdate}
+  \vspace{0.42cm}
+\end{frame}
+\endgroup
+
+% Slide 2 ---------------------------------------------------------------------
+\begin{frame}{Bab ini membantu orang tua membaca kebutuhan belajar siswa}
+  \kicker{Tiga Pertanyaan Utama}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.31\textwidth}
+      \begin{block}{Apa yang diujikan?}
+        Dua kelompok tes, tujuh subtes, serta kemampuan yang berbeda pada setiap bagian.
+      \end{block}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \begin{block}{Mengapa nilai berbeda?}
+        Seorang siswa dapat kuat pada satu subtes dan memerlukan bantuan pada subtes lain.
+      \end{block}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \begin{block}{Apa tindak lanjutnya?}
+        Hasil per subtes digunakan untuk memilih materi, latihan, remedial, dan strategi waktu.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vspace{0.18cm}
+  \centering
+  {\color{StudentNavy}\bfseries\fontsize{13}{16}\selectfont Nilai total penting, tetapi profil kemampuan siswa jauh lebih berguna untuk pembimbingan.}
+\end{frame}
+
+% Slide 3 ---------------------------------------------------------------------
+\begin{frame}{Framework resmi 2026 menjadi titik acuan sementara}
+  \kicker{Struktur yang Sudah Terpublikasi}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.20\textwidth}
+      \metric{2}{kelompok tes}
+    \end{column}
+    \begin{column}{0.20\textwidth}
+      \metric{7}{subtes}
+    \end{column}
+    \begin{column}{0.20\textwidth}
+      \metric{155}{akumulasi soal}
+    \end{column}
+    \begin{column}{0.22\textwidth}
+      \metric{195}{menit tanpa jeda}
+    \end{column}
+  \end{columns}
+  \vspace{0.40cm}
+  \begin{beamercolorbox}[rounded=true,sep=0.22cm,wd=\textwidth]{block body}
+    \centering\bfseries Ketentuan UTBK 2027 belum diperlakukan final sebelum dipublikasikan oleh SNPMB.
+  \end{beamercolorbox}
+  \vspace{0.22cm}
+  {\color{StudentGray}\fontsize{10.5}{13}\selectfont Angka 155 merupakan penjumlahan jumlah soal pada tujuh subtes dalam framework resmi 2026.}
+\end{frame}
+
+% Slide 4 ---------------------------------------------------------------------
+\begin{frame}{Setiap subtes memiliki tekanan waktu yang berbeda}
+  \kicker{Jumlah Soal dan Durasi Resmi 2026}
+  {\fontsize{9.8}{12.2}\selectfont
+  \renewcommand{\arraystretch}{0.92}
+  \begin{tabularx}{\textwidth}{>{\RaggedRight\arraybackslash}X >{\centering\arraybackslash}p{0.13\textwidth} >{\centering\arraybackslash}p{0.15\textwidth} >{\centering\arraybackslash}p{0.18\textwidth}}
+    \toprule
+    \textbf{Subtes} & \textbf{Soal} & \textbf{Menit} & \textbf{Rata-rata/soal} \\
+    \midrule
+    Penalaran Umum & 30 & 30 & 60 detik \\
+    Pengetahuan dan Pemahaman Umum & 20 & 15 & 45 detik \\
+    Pemahaman Bacaan dan Menulis & 20 & 25 & 75 detik \\
+    Pengetahuan Kuantitatif & 20 & 20 & 60 detik \\
+    Literasi dalam Bahasa Indonesia & 30 & 42,5 & 85 detik \\
+    Literasi dalam Bahasa Inggris & 20 & 20 & 60 detik \\
+    Penalaran Matematika & 20 & 42,5 & 127,5 detik \\
+    \bottomrule
+  \end{tabularx}}
+  \vspace{0.08cm}
+  {\color{StudentGray}\fontsize{8.8}{10.8}\selectfont Rata-rata hanya ilustrasi; pembagian waktu tetap disesuaikan dengan kesulitan soal.}
+\end{frame}
+
+% Slide 5 ---------------------------------------------------------------------
+\begin{frame}{TPS mengukur kesiapan berpikir untuk belajar di perguruan tinggi}
+  \kicker{Kelompok 1 -- Tes Potensi Skolastik}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.47\textwidth}
+      \claim{TPS tidak berfokus pada hafalan mata pelajaran tertentu.}
+      \vspace{0.22cm}
+      {\fontsize{12}{15}\selectfont Kemampuan yang dilihat berkembang melalui proses belajar dan pengalaman, di dalam maupun di luar kelas.}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \begin{enumerate}
+        \item Penalaran Umum
+        \item Pengetahuan dan Pemahaman Umum
+        \item Pemahaman Bacaan dan Menulis
+        \item Pengetahuan Kuantitatif
+      \end{enumerate}
+    \end{column}
+  \end{columns}
+  \vspace{0.18cm}
+  \begin{beamercolorbox}[rounded=true,sep=0.17cm,wd=\textwidth]{block body}
+    \centering\bfseries Pembimbingan TPS melatih pola berpikir, pemahaman bahasa, ketelitian, dan keputusan dalam waktu terbatas.
+  \end{beamercolorbox}
+\end{frame}
+
+% Slide 6 ---------------------------------------------------------------------
+\begin{frame}{Penalaran Umum menguji cara menemukan dan memakai aturan}
+  \kicker{30 Soal \textbar\ 30 Menit}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.43\textwidth}
+      {\color{StudentBlue}\bfseries Tiga bagian}\par
+      \begin{itemize}
+        \item Induktif: menemukan pola dari fakta.
+        \item Deduktif: menarik simpulan dari premis.
+        \item Kuantitatif: bernalar dengan angka.
+      \end{itemize}
+      \vspace{0.10cm}
+      {\color{StudentGray}\fontsize{10.8}{13.5}\selectfont Masing-masing terdiri atas 10 soal dan 10 menit.}
+    \end{column}
+    \begin{column}{0.51\textwidth}
+      \begin{block}{Contoh singkat: penalaran induktif}
+        Perhatikan pola bilangan berikut:
+        \[
+          5,\;8,\;14,\;23,\;35,\;\ldots
+        \]
+        Bilangan selanjutnya adalah \ldots
+        \answer{50, karena selisihnya bertambah 3: 3, 6, 9, 12, 15.}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Slide 7 ---------------------------------------------------------------------
+\begin{frame}{PPU menilai bahasa melalui konteks, bukan hafalan istilah}
+  \kicker{20 Soal \textbar\ 15 Menit}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.46\textwidth}
+      {\color{StudentBlue}\bfseries Materi utama}\par
+      \begin{itemize}
+        \item Makna kata, frasa, dan kalimat.
+        \item Hubungan antargagasan.
+        \item Informasi umum dalam konteks sosial budaya.
+        \item Simpulan dari bacaan pendek atau panjang.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Contoh singkat}
+        "Program belajar harus \textbf{adaptif} terhadap hasil diagnostik siswa."
+
+        Makna kata \textit{adaptif} pada kalimat tersebut adalah \ldots
+
+        \answer{mampu menyesuaikan diri dengan keadaan.}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Slide 8 ---------------------------------------------------------------------
+\begin{frame}{PBM menguji kemampuan memperbaiki gagasan tertulis}
+  \kicker{20 Soal \textbar\ 25 Menit}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.44\textwidth}
+      {\color{StudentBlue}\bfseries Tiga cakupan}\par
+      \begin{itemize}
+        \item Pemilihan gagasan: judul, diksi, pelengkap paragraf.
+        \item Penataan gagasan: urutan, posisi, dan penggabungan kalimat.
+        \item Perbaikan gagasan: ejaan, keefektifan, dan ketepatan kalimat.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.50\textwidth}
+      \begin{block}{Contoh singkat}
+        Kalimat tidak efektif:
+
+        "Karena nilai tryout menurun, sehingga siswa mengikuti remedial."
+
+        \answer{Karena nilai tryout menurun, siswa mengikuti remedial.}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Slide 9 ---------------------------------------------------------------------
+\begin{frame}{PK memerlukan konsep matematika dan pilihan strategi yang cepat}
+  \kicker{20 Soal \textbar\ 20 Menit}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.43\textwidth}
+      {\color{StudentBlue}\bfseries Materi utama}\par
+      \begin{itemize}
+        \item Bilangan dan operasi.
+        \item Aljabar.
+        \item Geometri dan pengukuran.
+        \item Analisis data.
+        \item Peluang.
+      \end{itemize}
+      \vspace{0.08cm}
+      {\color{StudentGray}\fontsize{9.8}{12}\selectfont Rumus saja tidak cukup; siswa harus memilih cara yang efisien.}
+    \end{column}
+    \begin{column}{0.51\textwidth}
+      \begin{block}{Contoh singkat}
+        Perbandingan peserta kelompok A dan B adalah $3:5$. Jika jumlah seluruh peserta 320 orang, selisih jumlah kedua kelompok adalah \ldots
+        Dengan $A=120$ dan $B=200$.\par
+        \answer{80 orang.}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Slide 10 --------------------------------------------------------------------
+\begin{frame}{Tes Literasi menilai kemampuan menggunakan informasi tertulis}
+  \kicker{Kelompok 2 -- Tes Literasi}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.45\textwidth}
+      \claim{Siswa harus menemukan, memahami, menilai, dan merefleksikan informasi.}
+      \vspace{0.20cm}
+      {\fontsize{11.8}{14.8}\selectfont Bacaan dan persoalan disajikan dalam berbagai konteks, bukan sebagai pertanyaan hafalan.}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \begin{enumerate}
+        \item Literasi dalam Bahasa Indonesia
+        \item Literasi dalam Bahasa Inggris
+        \item Penalaran Matematika
+      \end{enumerate}
+      \vspace{0.22cm}
+      \begin{block}{Kebiasaan yang dibutuhkan}
+        Membaca aktif, menandai bukti, membedakan fakta dan simpulan, serta memeriksa kewajaran jawaban.
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Slide 11 --------------------------------------------------------------------
+\begin{frame}{LBI menguji literasi ilmu pengetahuan dalam tiga konteks}
+  \kicker{30 Soal \textbar\ 42,5 Menit}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.31\textwidth}
+      \begin{block}{Saintek}
+        Teks berkaitan dengan fisika, kimia, dan biologi.
+      \end{block}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \begin{block}{Sosial humaniora}
+        Teks berkaitan dengan ekonomi, sejarah, dan sosiogeografi.
+      \end{block}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \begin{block}{Personal}
+        Teks berkaitan dengan apresiasi sastra.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vspace{0.20cm}
+  {\color{StudentBlue}\bfseries Kemampuan yang dinilai}\par
+  \vspace{0.05cm}
+  {\fontsize{11.5}{14.3}\selectfont Menemukan informasi, memahami hubungan gagasan, menilai bukti, menarik simpulan, dan merefleksikan bacaan.}
+  \vspace{0.12cm}
+  {\color{StudentGray}\fontsize{9.8}{12}\selectfont Domain mengikuti bahan ajar SMA/sederajat; soal tetap berpusat pada literasi.}
+\end{frame}
+
+% Slide 12 --------------------------------------------------------------------
+\begin{frame}{Skor LBI 2026 membuat profil konteks semakin penting}
+  \kicker{Perubahan Hasil dan Antisipasi 2027}
+  {\fontsize{10.3}{12.8}\selectfont
+  \renewcommand{\arraystretch}{0.98}
+  \begin{tabularx}{\textwidth}{>{\RaggedRight\arraybackslash}p{0.24\textwidth} >{\RaggedRight\arraybackslash}p{0.20\textwidth} >{\RaggedRight\arraybackslash}X}
+    \toprule
+    \textbf{Perubahan} & \textbf{Status} & \textbf{Implikasi pembimbingan} \\
+    \midrule
+    Sertifikat 2026 memisahkan skor LBI saintek dan soshum & \statusok & Analisis latihan dibedakan menurut konteks bacaan. \\
+    Latihan wawasan kebangsaan dalam LBI & \statuswait & Disiapkan sebagai konteks bacaan; menunggu ketentuan SNPMB 2027. \\
+    \bottomrule
+  \end{tabularx}}
+  \vspace{0.12cm}
+  \begin{beamercolorbox}[rounded=true,sep=0.14cm,wd=\textwidth]{block body}
+    \centering\bfseries Profil konteks menunjukkan jenis bacaan yang masih perlu diperkuat.
+  \end{beamercolorbox}
+\end{frame}
+
+% Slide 13 --------------------------------------------------------------------
+\begin{frame}{Contoh LBI: jawaban harus bertumpu pada bukti bacaan}
+  \kicker{Ilustrasi Soal Konteks Saintek}
+  \begin{block}{Bacaan singkat}
+    Hutan mangrove mengurangi energi gelombang dan menjadi habitat berbagai biota. Ketika mangrove dialihfungsikan, risiko abrasi meningkat dan hasil tangkapan nelayan dapat menurun.
+  \end{block}
+  \vspace{0.06cm}
+  {\fontsize{10.8}{13.5}\selectfont Simpulan yang paling tepat adalah \ldots}
+  {\fontsize{10.5}{13}\selectfont
+  \begin{enumerate}
+    \item Mangrove hanya bermanfaat bagi nelayan.
+    \item Alih fungsi mangrove tidak memengaruhi garis pantai.
+    \item Pelestarian mangrove mendukung perlindungan pantai dan kehidupan biota.
+  \end{enumerate}}
+  {\color{StudentGreen}\bfseries\fontsize{10.5}{13}\selectfont Jawaban: C, karena didukung oleh dua fungsi dalam bacaan.}
+\end{frame}
+
+% Slide 14 --------------------------------------------------------------------
+\begin{frame}{LBE menguji pemahaman bacaan akademik berbahasa Inggris}
+  \kicker{20 Soal \textbar\ 20 Menit}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.42\textwidth}
+      {\color{StudentBlue}\bfseries Konteks bacaan}\par
+      \begin{itemize}
+        \item Science and technology
+        \item Social sciences and humanities
+        \item Personal and literary texts
+      \end{itemize}
+      \vspace{0.10cm}
+      {\color{StudentGray}\fontsize{10.5}{13}\selectfont Fokusnya bukan sekadar tata bahasa, tetapi menemukan dan mengevaluasi informasi.}
+    \end{column}
+    \begin{column}{0.52\textwidth}
+      \begin{block}{Contoh singkat}
+        "Regular retrieval practice strengthens long-term memory more effectively than repeatedly rereading the same notes."
+
+        What is the main idea?
+
+        \answer{Active recall is more effective for long-term memory than rereading.}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Slide 15 --------------------------------------------------------------------
+\begin{frame}{Penalaran Matematika menghubungkan masalah nyata dan model}
+  \kicker{20 Soal \textbar\ 42,5 Menit}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.47\textwidth}
+      {\color{StudentBlue}\bfseries Tiga proses utama}\par
+      \begin{enumerate}
+        \item \textbf{Merumuskan}: mengubah situasi menjadi model matematika.
+        \item \textbf{Menggunakan}: menerapkan konsep dan prosedur.
+        \item \textbf{Menafsirkan}: mengembalikan hasil ke konteks masalah.
+      \end{enumerate}
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      {\color{StudentBlue}\bfseries Konteks masalah}\par
+      \begin{itemize}
+        \item Pribadi
+        \item Pekerjaan
+        \item Sosial
+        \item Ilmiah
+      \end{itemize}
+      \begin{block}{Yang dicari}
+        Strategi yang tepat, argumen logis, pola, serta kewajaran hasil.
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Slide 16 --------------------------------------------------------------------
+\begin{frame}{Contoh Penalaran Matematika: hasil harus masuk akal}
+  \kicker{Ilustrasi Pemodelan}
+  \begin{block}{Masalah}
+    Biaya taksi terdiri atas tarif awal Rp12.000 dan Rp4.000 untuk setiap kilometer. Jika seorang siswa memiliki anggaran paling banyak Rp40.000, berapa kilometer maksimum yang dapat ditempuh?
+  \end{block}
+  \vspace{0.15cm}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.46\textwidth}
+      {\color{StudentBlue}\bfseries Model}\par
+      \[
+        12.000 + 4.000x \leq 40.000
+      \]
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      {\color{StudentBlue}\bfseries Interpretasi}\par
+      \[
+        x \leq 7
+      \]
+      \answer{Maksimum 7 kilometer.}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Slide 17 --------------------------------------------------------------------
+\begin{frame}{Profil per subtes lebih berguna daripada satu nilai rata-rata}
+  \kicker{Cara Membaca Hasil Tryout}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.46\textwidth}
+      \begin{block}{Nilai total menjawab}
+        Seberapa jauh hasil siswa pada satu simulasi?
+      \end{block}
+      \vspace{0.15cm}
+      \begin{block}{Profil subtes menjawab}
+        Mengapa hasil itu terjadi dan bagian mana yang perlu diperbaiki?
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{itemize}
+        \item Akurasi per subtes dan materi.
+        \item Waktu pengerjaan.
+        \item Pola jawaban kosong atau tebakan.
+        \item Jenis kesalahan yang berulang.
+        \item Perubahan hasil dari waktu ke waktu.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Slide 18 --------------------------------------------------------------------
+\begin{frame}{StudentPro menerjemahkan framework menjadi kegiatan belajar}
+  \kicker{Implementasi Menuju 2027}
+  {\fontsize{9.5}{11.8}\selectfont
+  \renewcommand{\arraystretch}{0.90}
+  \begin{tabularx}{\textwidth}{>{\bfseries\color{StudentBlue}}p{0.20\textwidth} >{\RaggedRight\arraybackslash}X >{\RaggedRight\arraybackslash}p{0.29\textwidth}}
+    \toprule
+    \textbf{Fungsi LMS} & \textbf{Implementasi} & \textbf{Keputusan pembimbingan} \\
+    \midrule
+    Materi & Modul per subtes dan indikator & Menentukan urutan belajar \\
+    Latihan & Kuis topikal dan paket subtes & Mengukur penguasaan bertahap \\
+    Tryout & Durasi resmi, urutan, dan simulasi tanpa jeda & Melatih strategi dan stamina \\
+    Analisis & Akurasi, waktu, indikator, dan konteks LBI & Menentukan remedial/pengayaan \\
+    Monitoring & Ketuntasan, tren, dan konsultasi & Komunikasi sekolah-orang tua \\
+    \bottomrule
+  \end{tabularx}}
+\end{frame}
+
+% Slide 19 --------------------------------------------------------------------
+\begin{frame}{Orang tua tidak perlu menguasai semua soal untuk bisa membantu}
+  \kicker{Hal yang Perlu Diingat}
+  \begin{itemize}
+    \item Tanyakan subtes yang sedang diperbaiki, bukan hanya nilai total.
+    \item Perhatikan konsistensi belajar dan kondisi fisik saat tryout penuh.
+    \item Beri ruang untuk remedial; penurunan sementara dapat menjadi bagian dari proses belajar.
+    \item Gunakan laporan StudentPro sebagai bahan dialog, bukan alat membandingkan anak.
+    \item Tunggu informasi resmi sebelum mengambil keputusan berdasarkan rumor perubahan UTBK 2027.
+  \end{itemize}
+  \vspace{0.24cm}
+  \begin{beamercolorbox}[rounded=true,sep=0.20cm,wd=\textwidth]{block body}
+    \centering\bfseries Bab berikutnya membahas evaluasi pelaksanaan pembimbingan UTBK 2026 di SMAN 1 Muntilan.
+  \end{beamercolorbox}
+\end{frame}
+
+% Slide 20 --------------------------------------------------------------------
+\begin{frame}{Sumber resmi}
+  \kicker{Rujukan Bab 2 -- Bagian 1}
+  {\color{StudentBlue}\bfseries\fontsize{15}{18}\selectfont 1. Panitia SNPMB}\par
+  \vspace{0.06cm}
+  {\fontsize{12.5}{15.5}\selectfont "Framework UTBK-SNBT Tahun 2026."}\par
+  {\fontsize{11.5}{14}\selectfont\href{https://snpmb.id/fr/}{https://snpmb.id/fr/}}\par
+  {\color{StudentGray}\fontsize{11}{13.5}\selectfont Sumber struktur, tujuan, materi, jumlah soal, dan durasi tujuh subtes.}\par
+  \vspace{0.38cm}
+  {\color{StudentBlue}\bfseries\fontsize{15}{18}\selectfont 2. Panitia SNPMB}\par
+  \vspace{0.06cm}
+  {\fontsize{12.5}{15.5}\selectfont "Informasi Umum UTBK-SNBT 2026."}\par
+  {\fontsize{11.2}{13.8}\selectfont\href{https://snpmb.id/utbk-snbt/informasi-umum}{snpmb.id/utbk-snbt/informasi-umum}}\par
+  {\color{StudentGray}\fontsize{11}{13.5}\selectfont Sumber tujuan, ketentuan umum, materi tes, dan pilihan program studi.}\par
+  \vspace{0.30cm}
+  {\color{StudentGray}\fontsize{10.5}{13}\selectfont Perhitungan total 155 soal dan rata-rata waktu per soal diturunkan dari data resmi per subtes.}
+\end{frame}
+
+% Slide 21 --------------------------------------------------------------------
+\begin{frame}{Sumber publik dan catatan status}
+  \kicker{Rujukan Bab 2 -- Bagian 2}
+  {\color{StudentBlue}\bfseries\fontsize{15}{18}\selectfont 3. DetikEdu -- 26 Mei 2026}\par
+  \vspace{0.06cm}
+  {\fontsize{11}{13.5}\selectfont "Skor LBI di Sertifikat UTBK 2026 Dipecah Saintek-Soshum."}\par
+  {\fontsize{10.2}{12.5}\selectfont\href{https://www.detik.com/edu/seleksi-masuk-pt/d-8505258/skor-lbi-di-sertifikat-utbk-2026-dipecah-saintek-soshum-snpmb-jelaskan-mengapa}{detik.com/edu/seleksi-masuk-pt/d-8505258/}}\par
+  {\color{StudentGray}\fontsize{10}{12.5}\selectfont Laporan konferensi pers yang mengutip pimpinan SNPMB 2026.}\par
+  \vspace{0.24cm}
+  {\color{StudentBlue}\bfseries\fontsize{15}{18}\selectfont 4. Rencana integrasi TWK ke LBI}\par
+  \vspace{0.06cm}
+  {\fontsize{11}{13.5}\selectfont Arah antisipasi materi StudentPro, bukan ketentuan resmi UTBK-SNBT 2027.}\par
+  {\color{StudentGray}\fontsize{10}{12.5}\selectfont Status: menunggu framework resmi SNPMB 2027.}\par
+  \vfill
+  \begin{beamercolorbox}[rounded=true,sep=0.14cm,wd=\textwidth]{block body}
+    \centering\bfseries Contoh soal Bab 2 disusun sendiri untuk menjelaskan kemampuan yang dilatih.
+  \end{beamercolorbox}
+\end{frame}
+
+\end{document}
